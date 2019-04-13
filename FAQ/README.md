@@ -1,6 +1,10 @@
 ## General
 
-TAB
+### PS4 keeps asking for a proxy server when it connected to GL.iNet's router  
+
+The presenting problem is that you are using GL.iNet's router, your Cellphone and Tablet connected via Wlan to the mini router and they’re working as aspected. When you try to connect a PS4 and it doesn’t matter how to connect it (LAN or Wlan) the PS4 keeps asking for a PROXY server and cancelled the process.
+
+When that happens, it might causes by captive portal. Please try to turn off the DNS Rebinding Attack Protection, which can be found in MORE SETTING > Custom DNS.
 
 ## Network
 
