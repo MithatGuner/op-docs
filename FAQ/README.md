@@ -32,6 +32,31 @@ When your mini-router was connected to a public WiFi, and your mobile phone or l
 - Disable DNS rebinding protection on router, you can find it in MORE SETTING > Custom DNS
 - Even then Chrome/Firefox might block the attempt to redirect because it will be expecting an ssl site. Please enter neverssl.com in the browser's address bar so that you get redirected to the captive portal
 
+### How to Connect a Hidden AP with MT300N-V2?  
+
+1. Connect to a non-hidden SSID on web UI  
+2. Kill and remove the process **gl_health** with the command 
+  ```
+  killall gl_health && mv /usr/bin/gl_health /usr/bin/gl_health1
+  ```  
+3. Set the hidden WiFi to wireless and restart network
+
+  ```
+  uci set wireless.sta.ssid=yourssid
+  uci set wireless.sta.channel=yourchannel
+  uci set wireless.sta.key=yourwifikey
+  uci set wireless.sta.bssid=yourbssidhere
+  uci set wireless.sta.encryption=psk2
+  
+  uci set wireless.mt7628.channel=yourchannel
+  
+  uci commit wireless
+  
+  /etc/init.d/network restart
+  ```
+  
+  <strong>Important: You must also set the wifi-device ‘mt7628’ to the same channel, otherwise it will not work.</strong>
+
 ## VPN
 
 ### Cannot Connect to PPTP Server?
