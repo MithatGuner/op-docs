@@ -108,7 +108,7 @@ uci commit network
 
 We should restart the network now, Typing `/etc/init.d/network restart` in command line.
 
-### Check VPN Status  
+## Check VPN Status  
 
 If everything works, the VPN interface will be set up.
 
