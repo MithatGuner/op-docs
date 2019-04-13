@@ -1,4 +1,4 @@
-### WPS for AP
+## WPS for AP
 
 ### Installation
 
@@ -45,7 +45,7 @@ fi
 return 0
 ```  
 
-### WPS for Station  
+## WPS for Station  
 
 For the sake of convenience, you should connect to an exist AP at first, because of station mode depends on some configuration files, such as firewall, network and dhcp. If you hadn't been connected a AP, you have to configure them manually.
 
