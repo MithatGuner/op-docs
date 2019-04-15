@@ -24,6 +24,10 @@ If you want to revert back to automatic mode, execute this command.
 echo -e "AT+QCFG=\"nwscanmode\",0,1" > /dev/ttyUSB2
 ```  
 
+### Why the router keep rebooting after connected a LTE module to it?  
+
+If the LTE modem module is pulling more than 500mA from the usb port then you won't be able to use it with the router. But in general, it won't pull more than 500mA. If a TLE modem module pull more than 500mA, it usually has an additional port for you to pipe-in power to it. You can connect a USB Y cable to that port.  
+
 ## Wireless
 
 ### Cannot Open the Login Page of Public WiFi?
