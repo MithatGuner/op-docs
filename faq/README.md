@@ -28,6 +28,23 @@ echo -e "AT+QCFG=\"nwscanmode\",0,1" > /dev/ttyUSB2
 
 If the LTE modem module is pulling more than 500mA from the usb port then you won't be able to use it with the router. But in general, it won't pull more than 500mA. If a TLE modem module pull more than 500mA, it usually has an additional port for you to pipe-in power to it. You can connect a USB Y cable to that port.  
 
+### How can I change the VLAN for PPPoE?  
+
+You may be unable to make PPPoE connection with GL.iNet's mini routers. A possible reason is that VDSL providers usually require a VLAN ID set (the ID depends on the specific ISP). Such as Cyta, it requires a VLAN ID of 835.  
+
+Take Cyta as an example, you need to edit the file */etc/config/network*. A driver-level VLAN could be created in the interface section by adding a dot (.) and the respective VLAN ID after the interface name (in the ifname option), like eth1.2 for VLAN ID 2 on eth1. So the changed looks like:  
+
+```  
+config 'interface' 'wan'
+    option 'proto'     'pppoe'
+    option 'ifname'    'eth0.835'
+    option 'username'  'user'
+    option 'password'  'pass'
+    option 'timeout'   '10'
+```  
+
+Please refer to [switch_configuration](https://openwrt.org/docs/guide-user/network/vlan/switch_configuration#creating_driver-level_vlans) for more details.  
+
 ## Wireless
 
 ### Cannot Open the Login Page of Public WiFi?
