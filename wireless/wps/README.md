@@ -1,10 +1,10 @@
-## WPS for AP
-
-### Installation
+## Installation
 
 Login to web UI, go to *APPLICATION* > *Plug-ins*. First, click on **Update** button to update the metadata for packages. Then, search and install **hostapd-utils**.
 
 ![img1](images/img1.png)
+
+## WPS for AP
 
 ### Enable WPS
 
