@@ -122,4 +122,8 @@ EOT
 reboot
 ```  
 
-At this point hopefully the router will reboot. Eventually you will hopefully once again be able to connect to the router via wired ethernet or via wifi. Connect and test the Internet connectivity.
+At this point hopefully the router will reboot. Eventually you will hopefully once again be able to connect to the router via wired ethernet or via wifi. Connect and test the Internet connectivity.  
+
+### Cannot enter username and password when upload VPN file?  
+
+If you upload an VPN file, it might prompt you enter username and password, but in some case, it might keeps reverting to same screen to setup configuration. It usually caused by bitdefender or other antivirus software, which may block you inputing password in non-https website, so blocking you to upload ovpn. You need to make an exception in the rules.
